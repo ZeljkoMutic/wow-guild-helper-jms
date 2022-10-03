@@ -1,14 +1,14 @@
 {
   "targets": {
-    "jaspero-jms": {
+    "wow-guild-helper": {
       "hosting": {
         "cms": [
-          "jaspero-jms"
+          "wow-guild-helper"
         ]
       }
     }
   },
   "projects": {
-    "default": "jaspero-jms"
+    "default": "wow-guild-helper"
   }
 }

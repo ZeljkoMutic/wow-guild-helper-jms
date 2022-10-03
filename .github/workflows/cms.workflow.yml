@@ -13,7 +13,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:
-      project: 'jaspero-jms'
+      project: 'wow-guild-helper'
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2

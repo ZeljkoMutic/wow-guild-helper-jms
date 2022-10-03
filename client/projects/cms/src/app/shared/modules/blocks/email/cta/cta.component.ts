@@ -12,7 +12,7 @@ export interface CtaOptions extends BlockDataOptions {
   module: ['automatic-emails'],
   previewValue: {
     label: `Link`,
-    link: `https://jaspero-jms.web.app`
+    link: `https://wow-guild-helper.web.app`
   },
   form: {
     schema: {

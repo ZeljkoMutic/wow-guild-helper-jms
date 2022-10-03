@@ -3,12 +3,12 @@
  */
 export const ENV_CONFIG = {
   firebase: {
-    apiKey: 'AIzaSyBpOVW-c-ExPTUHRAXRO8-yTUVPq0pKS1g',
-    authDomain: 'jaspero-jms.firebaseapp.com',
-    databaseURL: 'https://jaspero-jms.firebaseio.com',
-    projectId: 'jaspero-jms',
-    storageBucket: 'jaspero-jms.appspot.com',
-    messagingSenderId: '82190793734',
-    appId: '1:82190793734:web:e6abf3c3a3bbb744'
+    'projectId': 'wow-guild-helper',
+    'appId': '1:52840715020:web:a128c92f4869d75387ef29',
+    'storageBucket': 'wow-guild-helper.appspot.com',
+    'apiKey': 'AIzaSyB7D3narWpeSmYYTTl1zG_gqiKj0YKyHgs',
+    'authDomain': 'wow-guild-helper.firebaseapp.com',
+    'messagingSenderId': '52840715020',
+    'measurementId': 'G-8XE57VEPP4'
   }
 };

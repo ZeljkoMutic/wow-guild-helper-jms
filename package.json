@@ -1,6 +1,6 @@
 {
-  "name": "@jaspero/jms",
-  "version": "5.39.7",
+  "name": "@jaspero/wow-guild-helper-jms",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start:emulator": "firebase emulators:start --export-on-exit=.emulator-export --import=.emulator-export",
@@ -39,12 +39,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaspero/jms"
+    "url": "https://github.com/zeljkomutic/wow-guild-helper-jms"
   },
   "bugs": {
-    "url": "https://github.com/jaspero/jms/issues"
+    "url": "https://github.com/zeljkomutic/wow-guild-helper-jms/issues"
   },
-  "homepage": "https://jaspero-jms.firebaseapp.com",
+  "homepage": "https://wow-guild-helper.web.app",
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",

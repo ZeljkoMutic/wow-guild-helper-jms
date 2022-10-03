@@ -11,7 +11,7 @@ on:
 jobs:
   deploy:
     env: 
-      project: 'jaspero-jms'
+      project: 'wow-guild-helper'
     name: Deploy
     runs-on: ubuntu-latest
     steps:
