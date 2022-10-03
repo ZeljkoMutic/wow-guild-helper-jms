@@ -15,7 +15,7 @@ export const STATIC_CONFIG = {
 
     /**
      * This is added as the suffix instead
-     * 
+     *
      * @example
      * A component with the selector jms-table
      * is registered as an element with the selector
@@ -45,6 +45,44 @@ export const STATIC_CONFIG = {
         type: 'link',
         value: '/dashboard'
       },
+
+      {
+        icon: 'star_half',
+        label: 'ITEMS',
+        type: 'link',
+        value: '/m/items'
+      },
+      {
+        icon: 'emoji_nature',
+        label: 'PROFESSIONS',
+        type: 'link',
+        value: '/m/professions'
+      },
+      {
+        icon: 'hive',
+        label: 'ZONES',
+        type: 'link',
+        value: '/m/zones'
+      },
+      {
+        icon: 'person_2',
+        label: 'CLASSES',
+        type: 'link',
+        value: '/m/classes'
+      },
+
+      {
+        children: [
+          {
+            label: 'Members',
+            type: 'link',
+            value: '/m/members'
+          }
+        ],
+        icon: 'reduce_capacity',
+        label: 'GUILD',
+        type: 'expandable'
+      },
       {
         children: [
           {
@@ -70,7 +108,8 @@ export const STATIC_CONFIG = {
              label: 'SENT_EMAILS',
              type: 'link',
              value: '/m/sent-emails'
-           }
+           },
+
         ],
         icon: 'account_box',
         label: 'MANAGEMENT',

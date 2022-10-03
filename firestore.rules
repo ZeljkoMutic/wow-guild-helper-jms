@@ -54,6 +54,30 @@ service cloud.firestore {
       allow read, write: if admin() || hasId(resource);
     }
 
+    match /items/{item=**} {
+      allow read, write: if admin() || hasId(resource);
+    }
+
+    match /professions/{item=**} {
+      allow read, write: if admin() || hasId(resource);
+    }
+
+    match /zones/{item=**} {
+      allow read, write: if admin() || hasId(resource);
+    }
+
+    match /classes/{item=**} {
+      allow read, write: if admin() || hasId(resource);
+    }
+
+    match /guild/{item=**} {
+      allow read, write: if admin() || hasId(resource);
+    }
+
+    match /members/{item=**} {
+      allow read, write: if admin() || hasId(resource);
+    }
+
     match /user-invites/{item=**} {
       allow read, write: if admin() || hasId(resource);
     }

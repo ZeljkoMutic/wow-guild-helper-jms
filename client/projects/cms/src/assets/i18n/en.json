@@ -223,5 +223,10 @@
   "USER_HISTORY": "User History",
   "CREATE": "Create",
   "BEFORE": "Before",
-  "AFTER": "After"
+  "AFTER": "After",
+  "ITEMS": "Items",
+  "PROFESSIONS": "Professions",
+  "ZONES": "Zones",
+  "CLASSES": "Classes",
+  "GUILD": "Guild"
 }
