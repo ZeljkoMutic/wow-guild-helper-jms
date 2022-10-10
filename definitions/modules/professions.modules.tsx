@@ -1,5 +1,6 @@
 import {Collections} from '../interfaces/collections';
 import {Module} from '../interfaces/module.interface';
+import {PipeType} from '../enums/pipe-type.enum';
 
 export const PROFESSIONS_MODULE: Module = {
   id: Collections.Professions,
@@ -81,7 +82,14 @@ export const PROFESSIONS_MODULE: Module = {
         },
         {
           key: '/icon',
-          label: 'Icon'
+          label: 'Icon',
+          pipe: [PipeType.Custom],
+          pipeArguments: {
+            0: (it, row) => {
+              return `<img src='${it}' width='40'>`
+            }
+          }
+
         }
       ]
     }

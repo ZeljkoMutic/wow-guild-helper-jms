@@ -1,5 +1,6 @@
 import {Collections} from '../interfaces/collections';
 import {Module} from '../interfaces/module.interface';
+import {PipeType} from '../enums/pipe-type.enum';
 
 export const CLASSES_MODULE: Module = {
   id: Collections.Classes,
@@ -109,6 +110,39 @@ export const CLASSES_MODULE: Module = {
           ]
         }
       ]
+    },
+    table:{
+      tableColumns: [
+        {
+          key: '/name',
+          label: 'Name'
+        },
+        {
+          key: '/icon',
+          label: 'Icon',
+          pipe: [PipeType.Custom],
+          pipeArguments: {
+            0: (it, row) => {
+              return `<img src='${it}' width='40'>`
+            }
+          }
+        },
+        {
+          key: '/specs',
+          label: 'Type of specialization',
+          pipe: [PipeType.Custom, PipeType.Sanitize],
+          pipeArguments: {
+            0: (it, row) => {
+              return it.map(spec => {
+                return `<img title='${spec.name}' style='margin-right: 10px;' src='${spec.icon}' width='40'>`;
+              }).join('');
+            }
+          }
+        }
+
+
+      ]
     }
+
   }
 };

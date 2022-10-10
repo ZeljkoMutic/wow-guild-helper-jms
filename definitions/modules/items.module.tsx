@@ -1,5 +1,6 @@
 import {Collections} from '../interfaces/collections';
 import {Module} from '../interfaces/module.interface';
+import {PipeType} from '../enums/pipe-type.enum';
 
 export const ITEMS_MODULE: Module = {
   id: Collections.Items,
@@ -45,19 +46,46 @@ export const ITEMS_MODULE: Module = {
     required: []
   },
   definitions: {
-    icon:{
+    icon: {
       label: 'Item photo',
-      component:{
-        type: 'image',
+      component: {
+        type: 'image'
       }
     }
   },
   layout: {
+    filterModule: {
+      value: [
+        {
+          key: 'itemLevel',
+          operator: '>',
+          value: 0
+        }
+      ],
+
+      schema: {
+        properties: {
+          class: {type: 'string'}
+        }
+      },
+      clearFilters: [
+        {
+          key: 'itemLevel',
+          operator: '>',
+          value: 0
+        }
+      ],
+      definitions: {
+        class: {
+          label: 'Item Class'
+        }
+      }
+    },
     editTitleKey: 'name',
     instance: {
-      segments:[{
-        fields:[
-         '/itemId',
+      segments: [{
+        fields: [
+          '/itemId',
           '/name',
           '/icon',
           '/class',
@@ -80,16 +108,48 @@ export const ITEMS_MODULE: Module = {
           label: 'Name'
         },
         {
+          key: '/class',
+          label: 'Class',
+        },
+        {
           key: '/icon',
           label: 'Icon',
+          pipe: [PipeType.Custom],
+          pipeArguments: {
+            0: (it, row) => {
+              return `<img src='${it}' width='40'>`;
+            }
+          }
         },
         {
           key: '/quality',
-          label: 'Quality'
+          label: 'Quality',
+          pipe:[PipeType.Custom, PipeType.Sanitize],
+          pipeArguments: {
+            0:(it,row) => {
+              if(it === 'Common'){
+                return `<font color='#808080'><b><em>${it}</em></b></font>`
+              }
+              if(it === 'Uncommon'){
+                return `<font color='#228b22'><b><em>${it}</em></b></font>`
+              }
+              if(it === 'Rare'){
+                return `<font color='#1e90ff'><b><em>${it}</em></b></font>`
+              }
+              if(it === 'Epic'){
+                return `<font color='#663399'><b><em>${it}</em></b></font>`
+              }
+              if(it === 'Legendary'){
+                return `<font color='orange'><b><em>${it}</em></b></font>`
+              }
+            }
+          }
+
         },
         {
           key: '/itemLevel',
-          label: 'Item Level'
+          label: 'Item Level',
+          sortable: true
         },
         {
           key: '/sellPrice',

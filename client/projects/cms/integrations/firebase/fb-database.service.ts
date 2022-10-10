@@ -270,13 +270,13 @@ export class FbDatabaseService extends DbService {
      * In firebase we can't sort by the
      * key we filter with.
      */
-    if (
-      filters?.length &&
-      (Array.isArray(sort) || sort?.active) &&
-      filters.some(it => Array.isArray(sort) ? sort.some(s => s.active === it.key) : it.key === sort.active)
-    ) {
-      sort = null;
-    }
+    // if (
+    //   filters?.length &&
+    //   (Array.isArray(sort) || sort?.active) &&
+    //   filters.some(it => Array.isArray(sort) ? sort.some(s => s.active === it.key) : it.key === sort.active)
+    // ) {
+    //   sort = null;
+    // }
 
     const methods = [
       ...sort ? Array.isArray(sort) ? sort.map(it => orderBy(it.active, it.direction)) : [orderBy(sort.active, sort.direction)] : [],

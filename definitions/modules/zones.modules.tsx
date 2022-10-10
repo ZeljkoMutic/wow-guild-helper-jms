@@ -40,6 +40,26 @@ export const ZONES_MODULE: Module = {
           '/level'
         ]
       }]
+    },
+    table:{
+      tableColumns: [
+        {
+          key: '/name',
+          label: 'Name'
+        },
+        {
+          key: '/category',
+          label: 'Category'
+        },
+        {
+          key: '/level',
+          label: 'Level'
+        },
+        {
+          key: '/territory',
+          label: 'Territory'
+        }
+      ]
     }
   }
 };

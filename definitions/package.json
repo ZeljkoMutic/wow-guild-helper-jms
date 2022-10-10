@@ -15,7 +15,8 @@
     "@jaspero/fb-tinymce": "2.9.1",
     "@jaspero/form-builder": "5.8.2",
     "adv-firestore-functions": "2.0.9",
-    "json-schema": "0.4.0"
+    "json-schema": "0.4.0",
+    "wow-classic-items": "^2.0.0"
   },
   "devDependencies": {
     "@google-cloud/storage": "5.19.3",
